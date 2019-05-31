@@ -12,8 +12,7 @@ WORKDIR /stylegan
 
 ADD eboy_data.py .
 ADD eboy_data.json .
-RUN python eboy_data.py --images_dir=eboy-images --input_data=eboy_data.json
-RUN python dataset_tool.py create_from_images datasets/eboy-dataset eboy-images
-
 ADD eboy_train.py .
-ENTRYPOINT ["python", "eboy_train.py", "--dataset_dir=eboy-dataset"]
+ADD eboy_run.sh .
+
+ENTRYPOINT ["eboy_run.sh"]
