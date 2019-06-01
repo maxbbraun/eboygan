@@ -9,7 +9,8 @@ gcloud compute instances create eboygan-vm \
     --zone=$ZONE \
     --image-family=tf-latest-gpu \
     --image-project=deeplearning-platform-release \
-    --accelerator="type=nvidia-tesla-v100,count=1" \
+    --machine-type=n1-standard-8 \
+    --accelerator="type=nvidia-tesla-v100,count=8" \
     --metadata="install-nvidia-driver=True" \
     --maintenance-policy=TERMINATE
 ```
