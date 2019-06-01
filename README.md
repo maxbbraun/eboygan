@@ -16,6 +16,6 @@ gcloud compute instances create-with-container eboygan-vm \
     --maintenance-policy=TERMINATE \
     --accelerator="type=nvidia-tesla-v100,count=8" \
     --machine-type=n1-standard-8 \
-    --boot-disk-size=120GB \
+    --boot-disk-size=200GB \
     --metadata="install-nvidia-driver=True"
 ```
