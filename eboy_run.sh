@@ -10,4 +10,4 @@ python eboy_data.py --images_dir=$IMAGES_DIR
 python dataset_tool.py create_from_images $DATASET_DIR $IMAGES_DIR
 
 # Start training.
-python eboy_train.py --dataset_dir=$DATASET_DIR
+python train.py

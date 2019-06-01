@@ -12,7 +12,7 @@ WORKDIR /stylegan
 
 ADD eboy_data.py .
 ADD eboy_data.json .
-ADD eboy_train.py .
+ADD eboy_train.py train.py
 ADD eboy_run.sh .
 
 ENTRYPOINT ["eboy_run.sh"]
