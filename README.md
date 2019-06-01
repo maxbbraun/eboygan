@@ -1,6 +1,6 @@
 # eBoyGAN
 
-[StyleGAN](https://github.com/NVlabs/stylegan) + [eBoy](https://db.eboy.com)
+[StyleGAN](https://github.com/NVlabs/stylegan) + [eBoy](http://hello.eboy.com)
 
 ```
 docker build -t eboygan .
