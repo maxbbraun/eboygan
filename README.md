@@ -22,12 +22,18 @@ gcloud compute ssh eboygan-vm --zone=$ZONE
 
 #### Install dependencies
 ```
-sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
-sudo apt-get install -y git python3.6
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
-sudo easy_install3 pip
-sudo pip3 install numpy requests tensorflow-gpu absl-py Pillow
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev \
+    libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
+wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz
+tar xvf Python-3.6.8.tgz
+cd Python-3.6.8
+./configure --enable-optimizations --with-ensurepip=install
+make -j8
+sudo make altinstall
+sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.6 2
+sudo /usr/local/bin/pip3.6 install numpy requests tensorflow-gpu absl-py Pillow
 ```
 
 #### Check out the code
@@ -46,7 +52,7 @@ RESULTS_DIR="$(pwd)/results"
 
 #### Generate the training images
 ```
-python generate.py --images_dir=$IMAGES_DIR
+python eboy_generate.py --images_dir=$IMAGES_DIR
 python dataset_tool.py create_from_images $DATASET_DIR $IMAGES_DIR
 ```
 
