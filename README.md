@@ -32,6 +32,7 @@ cd Python-3.6.8
 ./configure --enable-optimizations --with-ensurepip=install
 make -j8
 sudo make altinstall
+cd ..
 sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.6 2
 sudo /usr/local/bin/pip3.6 install numpy requests tensorflow-gpu absl-py Pillow
 ```
