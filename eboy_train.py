@@ -9,7 +9,7 @@ from metrics import metric_base
 
 FLAGS = flags.FLAGS
 flags.DEFINE_integer('size', 128, 'The size of the training images.')
-flags.DEFINE_string('dataset_dir', 'eboy-dataset',
+flags.DEFINE_string('dataset_dir', 'eboy',
                     'The directory of the training dataset.')
 
 

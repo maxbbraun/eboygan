@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IMAGES_DIR="$(pwd)/eboy-images"
-DATASET_DIR="$(pwd)/datasets/eboy-dataset"
+DATASET_DIR="$(pwd)/datasets/eboy"
 
 # Download and crop the images.
 python eboy_data.py --images_dir=$IMAGES_DIR
