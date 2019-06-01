@@ -1,5 +1,16 @@
 {
     "image_urls": [
-        "https://eboy.s3.amazonaws.com/bubble/projects/2015/San%20Francisco/EBY-SanFrancisco-190k.png"
+        "https://eboy.s3.amazonaws.com/bubble/projects/2015/San%20Francisco/EBY-SanFrancisco-190k.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2019/eBoy/EBY-Tokyo-V4-69t-randlos.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2018/Berlin/EBY-Berlin-V4-81t.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2013/M%C3%B6ve/MVA-Iat%C3%BA-RockRio-Concert-01k.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2014/Miami/MRS-Miami-Pixorama-79t.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2014/New%20York/ECB-NY-V5-03t.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2015/London/ECB-London-V3-34k.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2012/Cologne/EBY-Cologne-Poster-V2-32t.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2008/Baltimore/EBY-BaltimorePoster-66k.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2013/Marseille/EBY-Marseille2013-40s.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2010/Venice/MAG-Venedigposter-58k.png",
+        "https://eboy.s3.amazonaws.com/bubble/projects/2011/Rio/EBY-Rio-Poster-34k.png"
     ]
 }
