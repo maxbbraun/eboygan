@@ -37,8 +37,7 @@ desc += '-eboy';     dataset = EasyDict(tfrecord_dir='eboy', resolution=128); tr
 desc += '-8gpu'; submit_config.num_gpus = 8; sched.minibatch_base = 32; sched.minibatch_dict = {4: 512, 8: 256, 16: 128, 32: 64, 64: 32}
 
 # Default options.
-#train.total_kimg = 25000
-train.total_kimg = 1000
+train.total_kimg = 25000
 sched.lod_initial_resolution = 8
 sched.G_lrate_dict = {128: 0.0015, 256: 0.002, 512: 0.003, 1024: 0.003}
 sched.D_lrate_dict = EasyDict(sched.G_lrate_dict)
