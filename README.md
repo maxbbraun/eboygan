@@ -5,7 +5,8 @@
 #### Create the VM
 ```
 ZONE=us-central1-a
-gcloud compute instances create eboygan-vm \
+INSTANCE=eboygan-vm
+gcloud compute instances create $INSTANCE \
     --zone=$ZONE \
     --image-family=tf-latest-gpu \
     --image-project=deeplearning-platform-release \
@@ -17,8 +18,8 @@ gcloud compute instances create eboygan-vm \
 
 #### Connect to the VM (and forward [TensorBoard](http://localhost:6006) port)
 ```
-gcloud compute ssh eboygan-vm --zone=$ZONE -- -NfL 6006:localhost:6006
-gcloud compute ssh eboygan-vm --zone=$ZONE
+gcloud compute ssh $INSTANCE --zone=$ZONE -- -NfL 6006:localhost:6006
+gcloud compute ssh $INSTANCE --zone=$ZONE
 ```
 
 #### Install dependencies
@@ -62,4 +63,9 @@ python dataset_tool.py create_from_images $DATASET_DIR $IMAGES_DIR
 ```
 tensorboard --logdir=$RESULTS_DIR &
 python train.py
+```
+
+#### Stop the VM
+```
+gcloud compute instances stop $INSTANCE
 ```
