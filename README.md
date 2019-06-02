@@ -35,8 +35,10 @@ cd Python-3.6.8
 make -j8
 sudo make altinstall
 cd ..
-sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.6 2
-sudo /usr/local/bin/pip3.6 install numpy requests tensorflow-gpu absl-py Pillow
+sudo update-alternatives --install /usr/bin/python python \
+    /usr/local/bin/python3.6 2
+sudo /usr/local/bin/pip3.6 install numpy scipy requests tensorflow-gpu absl-py \
+    Pillow
 ```
 
 #### Check out the code
@@ -61,7 +63,7 @@ python dataset_tool.py create_from_images $DATASET_DIR $IMAGES_DIR
 
 #### Start training
 ```
-tensorboard --logdir=$RESULTS_DIR &
+nohup tensorboard --logdir=$RESULTS_DIR > /dev/null 2>&1 &
 python train.py
 ```
 
