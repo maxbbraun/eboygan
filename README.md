@@ -41,7 +41,7 @@ sudo /usr/local/bin/pip3.6 install numpy requests tensorflow-gpu absl-py Pillow
 
 #### Check out the code
 ```
-git clone git@github.com:maxbbraun/eboygan.git
+git clone https://github.com/maxbbraun/eboygan.git
 cd eboygan
 git clone https://github.com/NVlabs/stylegan.git
 cd stylegan
