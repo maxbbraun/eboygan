@@ -32,7 +32,7 @@ def main(_):
     with open(FLAGS.input_data) as json_file:
         for image_url in json_load(json_file)['image_urls']:
             logging.info('Processing %s' % image_url)
-            image = Image.open(BytesIO(get(image_url).content))
+            image = Image.open(BytesIO(get(image_url).content)).convert('RGB')
             image_hash = md5(image_url.encode()).hexdigest()
 
             # Resize to pixel size of 1, if needed.
