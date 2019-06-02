@@ -73,7 +73,7 @@ python dataset_tool.py create_from_images $DATASET_DIR $IMAGES_DIR
 
 ```
 nohup tensorboard --logdir=$RESULTS_DIR > /dev/null 2>&1 &
-python train.py
+nohup python train.py &
 ```
 
 #### Stop the VM
