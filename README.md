@@ -3,6 +3,7 @@
 [StyleGAN](https://github.com/NVlabs/stylegan) + [eBoy](http://hello.eboy.com)
 
 #### Create the VM
+
 ```
 ZONE=us-central1-a
 INSTANCE=eboygan-vm
@@ -10,19 +11,24 @@ gcloud compute instances create $INSTANCE \
     --zone=$ZONE \
     --image-family=tf-latest-gpu \
     --image-project=deeplearning-platform-release \
-    --machine-type=n1-standard-8 \
+    --machine-type=n1-highmem-8 \
+    --boot-disk-size=200GB \
     --accelerator="type=nvidia-tesla-v100,count=8" \
     --metadata="install-nvidia-driver=True" \
     --maintenance-policy=TERMINATE
 ```
 
+Or via the [Marketplace](https://console.cloud.google.com/marketplace/details/click-to-deploy-images/deeplearning).
+
 #### Connect to the VM (and forward [TensorBoard](http://localhost:6006) port)
+
 ```
 gcloud compute ssh $INSTANCE --zone=$ZONE -- -NfL 6006:localhost:6006
 gcloud compute ssh $INSTANCE --zone=$ZONE
 ```
 
 #### Install dependencies
+
 ```
 sudo apt-get update
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
@@ -42,6 +48,7 @@ sudo /usr/local/bin/pip3.6 install numpy scipy requests tensorflow-gpu absl-py \
 ```
 
 #### Check out the code
+
 ```
 git clone https://github.com/maxbbraun/eboygan.git
 cd eboygan
@@ -56,18 +63,21 @@ RESULTS_DIR="$(pwd)/results"
 ```
 
 #### Generate the training images
+
 ```
 python eboy_generate.py --images_dir=$IMAGES_DIR
 python dataset_tool.py create_from_images $DATASET_DIR $IMAGES_DIR
 ```
 
 #### Start training
+
 ```
 nohup tensorboard --logdir=$RESULTS_DIR > /dev/null 2>&1 &
 python train.py
 ```
 
 #### Stop the VM
+
 ```
 gcloud compute instances stop $INSTANCE
 ```
