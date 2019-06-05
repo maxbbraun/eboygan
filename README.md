@@ -11,14 +11,12 @@ gcloud compute instances create $INSTANCE \
     --zone=$ZONE \
     --image-family=tf-latest-gpu \
     --image-project=deeplearning-platform-release \
-    --machine-type=n1-highmem-8 \
-    --boot-disk-size=200GB \
+    --machine-type=n1-highmem-16 \
+    --boot-disk-size=1TB \
     --accelerator="type=nvidia-tesla-v100,count=8" \
     --metadata="install-nvidia-driver=True" \
     --maintenance-policy=TERMINATE
 ```
-
-Or via the [Marketplace](https://console.cloud.google.com/marketplace/details/click-to-deploy-images/deeplearning).
 
 #### Connect to the VM (and forward [TensorBoard](http://localhost:6006) port)
 
