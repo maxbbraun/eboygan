@@ -2,6 +2,12 @@
 
 [StyleGAN](https://github.com/NVlabs/stylegan) + [eBoy](http://hello.eboy.com)
 
+## Inference
+
+[Colab](https://colab.research.google.com/drive/1IXI9cBgqS1_4A9Quhhve3B7uPMshauKX)
+
+## Training
+
 #### Create the VM
 
 ```
