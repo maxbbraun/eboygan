@@ -2,7 +2,9 @@
 
 [StyleGAN](https://github.com/NVlabs/stylegan) + [eBoy](http://hello.eboy.com)
 
-![](eboygan_f844e2620c0cf5f1e5a5748f54e5f8a2_50i_20fps_256px.gif) ![](eboygan_5d3bd2b4cc05cba5a69f0c96493dd255_50i_20fps_256px.gif)
+![](eboygan_f844e2620c0cf5f1e5a5748f54e5f8a2_50i_20fps_256px.gif)
+![](eboygan_5d3bd2b4cc05cba5a69f0c96493dd255_50i_20fps_256px.gif)
+![](eboygan_3a66d0c6d1b9a9f18e5cffc10cfe8c5b_50i_20fps_256px.gif)
 
 ## Inference
 
