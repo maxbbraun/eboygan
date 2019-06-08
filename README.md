@@ -4,7 +4,7 @@
 
 ## Inference
 
-[Colab](https://colab.research.google.com/drive/1IXI9cBgqS1_4A9Quhhve3B7uPMshauKX)
+See [Colab](https://colab.research.google.com/drive/1IXI9cBgqS1_4A9Quhhve3B7uPMshauKX#forceEdit=true&offline=true&sandboxMode=true&scrollTo=t8OJLyhRgzpT)
 
 ## Training
 
