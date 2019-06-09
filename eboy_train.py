@@ -22,13 +22,6 @@ tf_config     = {'rnd.np_random_seed': 1000}                                    
 
 # Dataset.
 desc += '-eboy';     dataset = EasyDict(tfrecord_dir='eboy', resolution=128); train.mirror_augment = True
-#desc += '-ffhq';     dataset = EasyDict(tfrecord_dir='ffhq');                 train.mirror_augment = True
-#desc += '-ffhq512';  dataset = EasyDict(tfrecord_dir='ffhq', resolution=512); train.mirror_augment = True
-#desc += '-ffhq256';  dataset = EasyDict(tfrecord_dir='ffhq', resolution=256); train.mirror_augment = True
-#desc += '-celebahq'; dataset = EasyDict(tfrecord_dir='celebahq');             train.mirror_augment = True
-#desc += '-bedroom';  dataset = EasyDict(tfrecord_dir='lsun-bedroom-full');    train.mirror_augment = False
-#desc += '-car';      dataset = EasyDict(tfrecord_dir='lsun-car-512x384');     train.mirror_augment = False
-#desc += '-cat';      dataset = EasyDict(tfrecord_dir='lsun-cat-full');        train.mirror_augment = False
 
 # Number of GPUs.
 #desc += '-1gpu'; submit_config.num_gpus = 1; sched.minibatch_base = 4; sched.minibatch_dict = {4: 128, 8: 128, 16: 128, 32: 64, 64: 32, 128: 16, 256: 8, 512: 4}
@@ -41,30 +34,6 @@ train.total_kimg = 25000
 sched.lod_initial_resolution = 8
 sched.G_lrate_dict = {128: 0.0015, 256: 0.002, 512: 0.003, 1024: 0.003}
 sched.D_lrate_dict = EasyDict(sched.G_lrate_dict)
-
-# WGAN-GP loss for CelebA-HQ.
-#desc += '-wgangp'; G_loss = EasyDict(func_name='training.loss.G_wgan'); D_loss = EasyDict(func_name='training.loss.D_wgan_gp'); sched.G_lrate_dict = {k: min(v, 0.002) for k, v in sched.G_lrate_dict.items()}; sched.D_lrate_dict = EasyDict(sched.G_lrate_dict)
-
-# Table 1.
-#desc += '-tuned-baseline'; G.use_styles = False; G.use_pixel_norm = True; G.use_instance_norm = False; G.mapping_layers = 0; G.truncation_psi = None; G.const_input_layer = False; G.style_mixing_prob = 0.0; G.use_noise = False
-#desc += '-add-mapping-and-styles'; G.const_input_layer = False; G.style_mixing_prob = 0.0; G.use_noise = False
-#desc += '-remove-traditional-input'; G.style_mixing_prob = 0.0; G.use_noise = False
-#desc += '-add-noise-inputs'; G.style_mixing_prob = 0.0
-#desc += '-mixing-regularization' # default
-
-# Table 2.
-#desc += '-mix0'; G.style_mixing_prob = 0.0
-#desc += '-mix50'; G.style_mixing_prob = 0.5
-#desc += '-mix90'; G.style_mixing_prob = 0.9 # default
-#desc += '-mix100'; G.style_mixing_prob = 1.0
-
-# Table 4.
-#desc += '-traditional-0'; G.use_styles = False; G.use_pixel_norm = True; G.use_instance_norm = False; G.mapping_layers = 0; G.truncation_psi = None; G.const_input_layer = False; G.style_mixing_prob = 0.0; G.use_noise = False
-#desc += '-traditional-8'; G.use_styles = False; G.use_pixel_norm = True; G.use_instance_norm = False; G.mapping_layers = 8; G.truncation_psi = None; G.const_input_layer = False; G.style_mixing_prob = 0.0; G.use_noise = False
-#desc += '-stylebased-0'; G.mapping_layers = 0
-#desc += '-stylebased-1'; G.mapping_layers = 1
-#desc += '-stylebased-2'; G.mapping_layers = 2
-#desc += '-stylebased-8'; G.mapping_layers = 8 # default
 
 
 def main():
