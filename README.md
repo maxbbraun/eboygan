@@ -1,6 +1,6 @@
 # eBoyGAN
 
-[StyleGAN](https://github.com/NVlabs/stylegan) + [eBoy](http://hello.eboy.com)
+It's [StyleGAN](https://github.com/NVlabs/stylegan) + [eBoy](http://hello.eboy.com). Learn more on [Twitter](https://twitter.com/maxbraun/status/1137510117631389698).
 
 ![](eboygan_f844e2620c0cf5f1e5a5748f54e5f8a2_50i_20fps_256px.gif)
 ![](eboygan_5d3bd2b4cc05cba5a69f0c96493dd255_50i_20fps_256px.gif)
@@ -8,7 +8,7 @@
 
 ## Inference
 
-See [Colab](https://colab.research.google.com/drive/1IXI9cBgqS1_4A9Quhhve3B7uPMshauKX#forceEdit=true&offline=true&sandboxMode=true)
+Generate videos or GIFs right from the browser using [Colab](https://colab.research.google.com/drive/1IXI9cBgqS1_4A9Quhhve3B7uPMshauKX#forceEdit=true&offline=true&sandboxMode=true).
 
 ## Training
 
