@@ -13,7 +13,7 @@ from requests import get
 
 FLAGS = flags.FLAGS
 flags.DEFINE_integer('size', 128, 'The size of the square images to crop.')
-flags.DEFINE_integer('stride', 64, 'The stride of the sliding crop window.')
+flags.DEFINE_integer('stride', 32, 'The stride of the sliding crop window.')
 flags.DEFINE_integer('min_colors', 5, 'The minimum number of colors per crop.')
 flags.DEFINE_string('input_data', 'eboy_data.json',
                     'The file containing the source image URLs.')
