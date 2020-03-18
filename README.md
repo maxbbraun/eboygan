@@ -1,6 +1,6 @@
 # eBoyGAN
 
-It's [StyleGAN](https://github.com/NVlabs/stylegan2) + [eBoy](http://hello.eboy.com). Learn more on [Twitter](https://twitter.com/maxbraun/status/1137510117631389698).
+It's [StyleGAN](https://github.com/NVlabs/stylegan2) + [eBoy](http://hello.eboy.com). Learn more on [Medium](https://onezero.medium.com/how-i-accidentally-created-an-infinite-pixel-hellscape-fe070551365f?source=friends_link&sk=73f115e24c040ebb338edf452f704725).
 
 ![](eboygan_10x_7bb82c5d500be1f5366e91a2bf9d2e13_1.0psi_23i_20fps_256px.gif)
 ![](eboygan_10x_39df54ecab310cc97af7d6d686d7d163_1.0psi_23i_20fps_256px.gif)
